@@ -1,0 +1,82 @@
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="maps.js"></script>
+
+    <title>Rent my parking</title>
+  </head>
+  <body>
+      <div class="container">
+          <h1>Here is all we need</h1>
+
+          <div class="row">
+              <div class="container col-6"> 
+
+              <form method="post" action="rentmyparking.php">
+                <div class="mb-3">
+                    <label for="fullName" class="form-label">Full name</label>
+                    <input type="text" class="form-control" id="fullName" name="fullName" aria-describedby="fullNameHelp">
+                    <div id="fullNameHelp" class="form-text">Full name of the parking owner</div>
+                </div>
+                <div class="mb-3">
+                    <label for="contactNumber" class="form-label">Contact Number</label>
+                    <input type="tel" pattern="[0-9]{10}"class="form-control" id="contactNumber" name="contactNumber" aria-describedby="contactNumberHelp">
+                    <div id="contactNumberHelp" class="form-text">Contact number of the parking owner</div>
+                </div>
+                <div class="mb-3">
+                    <label for="emailAddress" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="emailAddress" name="emailAddress" aria-describedby="emailAddressHelp">
+                    <div id="emailAddressHelp" class="form-text">E-mail address of the Parking Owner</div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="parkingLocation" class="form-label">Parking Lot Location</label>
+                    <input type="text" class="form-control" id="pac-input"
+                    class="controls" name="parkingLocation" aria-describedby="parkingLocationHelp">
+                    <div id="pac-input" class="form-text">Location of the parking lot</div>
+                </div>
+        
+
+
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="agreement" name="agreement">
+                    <label class="form-check-label" for="agreement">All provided details are vaild and true upto my knowledge</label>
+                </div>
+                
+                <button style="color:black;" type="submit" class="btn btn-primary">Submit</button>
+            </form>
+              </div>
+              <div class="container col-6" id="map"> 
+
+              </div>
+</div>
+      </div>
+    
+
+    <!-- Optional JavaScript; choose one of the two! -->
+    <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSxzefhhAv-XBLd1pxMTYjUtOBU5PEslw&callback=initAutocomplete&libraries=places&v=weekly"
+    async
+  ></script>
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
